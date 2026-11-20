@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Android 개발자 이정현의 포트폴리오. Jetpack Compose, SwiftUI, Kotlin Multiplatform 프로젝트와 개발 경험을 소개합니다.">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>이정현 — Android Developer</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="top">
+    <nav class="shell nav" aria-label="주 메뉴">
+      <a class="brand" href="#main"><span class="brandmark" aria-hidden="true">AJ</span> 이정현</a>
+      <div class="navlinks"><a href="#projects">프로젝트</a><a href="#experience">경력</a><a href="#notes">학습 기록</a></div>
+      <a class="github-link" href="https://github.com/AnsJung">GitHub</a>
+    </nav>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="intro">
+        <p class="eyebrow"><span></span> ANDROID DEVELOPER</p>
+        <h1 id="hero-title">이정현<span>.</span></h1>
+        <p class="lead">Android를 중심으로<br>iOS와 KMP까지 개발합니다.</p>
+        <p class="intro-copy">사용자가 보는 화면부터 데이터가 흐르는 방식까지 고민합니다. Android·iOS 앱을 개발하고 운영한 경험을 바탕으로, 플랫폼 간 코드 공유를 실험하고 있습니다.</p>
+        <div class="hero-actions"><a class="button primary" href="#projects">대표 프로젝트 보기</a><a class="button secondary" href="mailto:cw03125@naver.com">이메일</a></div>
+      </div>
+      <figure class="architecture">
+        <div class="diagram-header"><strong>KMP 아키텍처 비교</strong><span>ANDROID / iOS</span></div>
+        <div class="diagram-select" role="group" aria-label="아키텍처를 비교할 프로젝트">
+          <button type="button" data-model="book" aria-pressed="true">BookSearch</button>
+          <button type="button" data-model="memo" aria-pressed="false">KMPMemo</button>
+        </div>
+        <div class="diagram" aria-hidden="true">
+          <div class="diagram-platform"><span>ANDROID</span><strong id="android-ui">Jetpack Compose</strong></div>
+          <div class="diagram-platform"><span>iOS</span><strong id="ios-ui">SwiftUI</strong></div>
+          <div class="connectors"></div>
+          <div class="diagram-shared"><span>SHARED KOTLIN</span><strong id="shared-ui">Domain · Data</strong></div>
+        </div>
+        <figcaption id="diagram-caption" aria-live="polite">BookSearch는 비즈니스 로직과 데이터 처리를 공유하고 화면은 플랫폼별로 구성합니다.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2 id="projects-title">대표 프로젝트</h2></div><p>검색, 로컬 저장, 갤러리에서 서로 다른 모바일 구현 방식을 실험했습니다.</p></div>
+      <div class="filters" role="group" aria-label="플랫폼으로 프로젝트 필터링" hidden>
+        <button type="button" data-filter="all" aria-pressed="true">전체</button><button type="button" data-filter="android" aria-pressed="false">Android</button><button type="button" data-filter="ios" aria-pressed="false">iOS</button><button type="button" data-filter="kmp" aria-pressed="false">KMP</button>
+      </div>
+      <p id="filter-status" class="sr-only" aria-live="polite"></p>
+      <div class="project-grid">
+        <article class="project" data-platforms="android ios kmp">
+          <div class="visual book" aria-hidden="true">
+            <div class="book-stack"><i></i><i></i><i></i><i></i></div>
+            <div class="visual-label"><span>KOTLIN MULTIPLATFORM</span><strong>Book<br>Search</strong><span>ANDROID + iOS</span></div>
+          </div>
+          <div class="project-copy"><p class="project-type">ANDROID · iOS</p><h3>BookSearch</h3><p>카카오 도서 검색으로 책을 찾고 상세 정보를 확인합니다. Kotlin으로 로직을 공유하고, 화면은 Jetpack Compose와 SwiftUI로 각각 구현했습니다.</p><ul class="tags"><li>Kotlin Multiplatform</li><li>Jetpack Compose</li><li>SwiftUI</li></ul><a href="https://github.com/AnsJung/BookSearch">GitHub에서 BookSearch 보기</a></div>
+        </article>
+        <article class="project" data-platforms="android ios kmp">
+          <div class="visual memo">
+            <div class="memo-label" aria-hidden="true"><span>COMPOSE MULTIPLATFORM</span><strong>One UI.<br>Two platforms.</strong></div>
+            <div class="memo-screens"><img src="assets/kmpmemo-android.png" alt="KMPMemo Android 메모 목록 화면" width="674" height="1368" loading="lazy"><img src="assets/kmpmemo-ios.png" alt="KMPMemo iOS 메모 목록 화면" width="728" height="1524" loading="lazy"></div>
+          </div>
+          <div class="project-copy"><p class="project-type">ANDROID · iOS</p><h3>KMPMemo</h3><p>메모를 작성, 편집, 삭제하는 앱입니다. Android와 iOS에서 같은 Compose UI를 사용하고, 메모는 각 기기의 로컬 데이터베이스에 저장합니다.</p><ul class="tags"><li>Compose Multiplatform</li><li>SQLDelight</li><li>Koin</li></ul><a href="https://github.com/AnsJung/KMPMemo">GitHub에서 KMPMemo 보기</a></div>
+        </article>
+        <article class="project" data-platforms="ios">
+          <div class="visual photo" aria-hidden="true">
+            <div class="photo-grid"><i></i><i></i><i></i><i></i></div>
+            <div class="visual-label"><span>SWIFTUI</span><strong>Photo<br>graphers</strong><span>iOS GALLERY</span></div>
+          </div>
+          <div class="project-copy"><p class="project-type">iOS</p><h3>Photographers</h3><p>사진작가를 선택하면 사진을 높이가 다른 2열 갤러리에서 탐색하고, 원하는 이미지를 확대해 볼 수 있습니다.</p><ul class="tags"><li>SwiftUI</li><li>Combine</li><li>FactoryKit</li></ul><a href="https://github.com/AnsJung/Photographers">GitHub에서 Photographers 보기</a></div>
+        </article>
+        <article class="project" data-platforms="android">
+          <div class="visual search" aria-hidden="true">
+            <div class="search-rows"><div><span>⌕</span> repository search</div><i></i><i></i><i></i></div>
+            <div class="visual-label"><span>JETPACK COMPOSE</span><strong>Search<br>Repo</strong><span>GITHUB SEARCH</span></div>
+          </div>
+          <div class="project-copy"><p class="project-type">ANDROID</p><h3>SearchRepo</h3><p>GitHub 저장소를 검색하고 상세 정보를 확인하는 앱입니다. 검색 입력을 디바운스하고 Paging 3로 결과를 이어서 불러옵니다.</p><ul class="tags"><li>Jetpack Compose</li><li>Paging 3</li><li>Hilt</li></ul><a href="https://github.com/AnsJung/SearchRepo">GitHub에서 SearchRepo 보기</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">EXPERIENCE</p><h2 id="experience-title">경력</h2></div></div>
+      <div class="career">
+        <article class="career-row"><div><h3>로지아이</h3><p>Android · iOS 앱 개발 및 유지보수</p></div><div><ul><li>Java 레거시 코드를 Kotlin으로 리팩토링하고 MVVM을 적용했습니다.</li><li>분산된 데이터 처리 로직을 정리하고 Coroutine 기반으로 전환했습니다.</li><li>iOS 프로젝트를 Objective-C에서 Swift로 전환하고, 모바일 앱 배포와 운영 이슈에 대응했습니다.</li></ul><ul class="tags"><li>Kotlin</li><li>Swift</li><li>UIKit</li><li>Room</li></ul></div></article>
+        <article class="career-row"><div><h3>오픈오브젝트</h3><p>SI 프로젝트 Android 개발</p></div><div><ul><li>현대건설 모바일 사원증에 Kotlin, MVVM, Hilt를 적용했습니다.</li><li>삼성전자 Indoor Positioning System과 CryptoDocent에서 네트워크 연동과 화면을 개발했습니다.</li><li>현대카드 DIVE의 사용자 접속 제어와 운영에 참여했고, NH페이의 카드 리스트 UI와 데이터 처리를 개선했습니다.</li></ul><ul class="tags"><li>Hilt</li><li>Retrofit</li><li>Ktor</li><li>MotionLayout</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="section notes" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading"><div><p class="eyebrow">GITHUB LABS</p><h2 id="notes-title">학습 기록</h2></div><p>작은 실습은 주제별 저장소에 모아 두었습니다.</p></div>
+      <div class="lab-grid">
+        <a href="https://github.com/AnsJung/ComposeCodeLab"><strong>ComposeCodeLab</strong><span>레이아웃, 상태, 애니메이션, UI 테스트</span></a>
+        <a href="https://github.com/AnsJung/android-kotlin-lab"><strong>Android Kotlin Lab</strong><span>Room, DataStore, 네트워크, 아키텍처</span></a>
+        <a href="https://github.com/AnsJung/android-kotlin-projects"><strong>Android Kotlin Projects</strong><span>독립 앱 실습과 원본 커밋 기록</span></a>
+        <a href="https://github.com/AnsJung/android-java-lab"><strong>Android Java Lab</strong><span>Navigation, MVP, MVVM, RxJava</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="shell footer-inner"><div><p class="eyebrow">CONTACT</p><h2>이정현</h2></div><div class="footer-links"><a href="mailto:cw03125@naver.com">cw03125@naver.com</a><a href="https://github.com/AnsJung">GitHub · AnsJung</a></div></div>
+  </footer>
+</body>
+</html>
